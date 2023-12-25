@@ -1,0 +1,73 @@
+<!-- synmail-app/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Synmail - Email Synchronizer</title>
+</head>
+<body>
+    <header>
+        <h1>Synmail - Email Synchronizer</h1>
+    </header>
+    <main>
+        <!-- Login Section -->
+        <section id="login-section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <!-- Email Accounts Section -->
+        <section id="accounts-section">
+            <h2>Email Accounts</h2>
+            <ul id="account-list">
+                <!-- Placeholder for Email Accounts -->
+            </ul>
+            <button id="add-account">Add Account</button>
+            <button id="delete-account">Delete Account</button>
+        </section>
+
+        <!-- Email Synchronization Section -->
+        <section id="sync-section">
+            <h2>Email Synchronization</h2>
+            <button id="sync-button">Sync Emails</button>
+            <p id="sync-status">Sync Status: Not initiated</p>
+        </section>
+
+        <!-- Unified Inbox Section -->
+        <section id="inbox-section">
+            <h2>Unified Inbox</h2>
+            <button id="customize-button">Customize Inbox</button>
+            <!-- Display Unified Inbox here -->
+            <div id="unified-inbox"></div>
+        </section>
+
+        <!-- Calendar Section -->
+        <section id="calendar-section">
+            <h2>Calendar Notifications</h2>
+            <ul id="calendar-notifications">
+                <!-- Placeholder for Calendar Notifications -->
+            </ul>
+        </section>
+
+        <!-- Status Updates Section -->
+        <section id="status-section">
+            <h2>Status Updates</h2>
+            <div id="real-time-updates"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Synmail - Email Synchronizer</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
