@@ -1,0 +1,27 @@
+{
+  "name": "Synmail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "login_page.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/IdaraKoffi/Synmail.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IdaraKoffi/Synmail/issues"
+  },
+  "homepage": "https://github.com/IdaraKoffi/Synmail#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.0.3"
+  }
+}
