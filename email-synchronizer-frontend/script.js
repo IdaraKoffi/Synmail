@@ -94,5 +94,5 @@ document.addEventListener('DOMContentLoaded', function () {
         body.style.backgroundColor = currentColor === 'blue' ? 'white' : 'blue';
     }
 
-    setInterval(alternateBackgroundColor, 5000); // Alternates background color every 5 seconds
+   // setInterval(alternateBackgroundColor, 5000); // Alternates background color every 5 seconds
 });
