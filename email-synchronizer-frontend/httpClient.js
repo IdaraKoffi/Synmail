@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const registerUser = async (userData) => {
   try {
-    const response = await axios.post('http://localhost:${port}/register', userData);
+    const response = await axios.post('http://localhost:3000/register', userData);
 
     // Axios automatically throws an error for non-2xx responses
     const data = response.data;
