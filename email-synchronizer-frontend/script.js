@@ -28,6 +28,28 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Function to make a fetch request to login endpoint
+    function Userlogin(email, password) {
+	    fetch('http://localhost:3000/login', {
+		    method: 'POST',
+		    header: {
+			    'Content-Type': 'application/json',
+		    },
+		    body: JSON.stringify({ email, password }),
+	    })
+	    .then(response => response.json())
+	    .then(data => {
+		    if (data.success) {
+			    console.log('Login successful');
+		    } else {
+			    console.error('Login failed:', data.message)
+		    }
+	    })
+	    .catch(error => {
+		    console.error('Error during login:', error);
+	    });
+    }
+
     // Function to initiate email synchronization
     function syncEmails() {
         // Add logic for email synchronization here
