@@ -64,6 +64,12 @@
             <h2>Status Updates</h2>
             <div id="real-time-updates"></div>
         </section>
+
+	<script>
+		fetch('/api/users')
+		.then(response => response.json())
+		.then(users => console.log(users));
+	</script>
     </main>
     <footer>
         <p>&copy; 2023 Synmail - Email Synchronizer</p>
