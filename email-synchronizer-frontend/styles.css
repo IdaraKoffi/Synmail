@@ -92,3 +92,33 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+/* Default styles for all screen sizes */
+
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        padding: 5px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    form {
+        width: 80%;
+    }
+
+    #unified-inbox {
+        padding: 5px;
+    }
+
+    footer {
+        padding: 5px;
+    }
+}
