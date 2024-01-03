@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function Userlogin(email, password) {
 	    fetch('http://localhost:3000/login', {
 		    method: 'POST',
-		    header: {
+		    headers: {
 			    'Content-Type': 'application/json',
 		    },
 		    body: JSON.stringify({ email, password }),
