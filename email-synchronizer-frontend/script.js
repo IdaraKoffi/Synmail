@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to make a fetch request to login endpoint
     function Userlogin(email, password) {
-	    fetch('http://localhost:3000/login', {
+	    fetch('http://localhost:21167/login', {
 		    method: 'POST',
 		    headers: {
 			    'Content-Type': 'application/json',
