@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Synmail - Email Synchronizer</title>
+
+    <!-- Include FullCalendar CSS from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.0/fullcalendar.min.css" />
+
+    <!-- Include Moment.js from CDN (required by FullCalendar) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <!-- Include FullCalendar JavaScript from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.0/fullcalendar.min.js"></script>
 </head>
 <body>
     <header>
@@ -70,10 +79,49 @@
         </section>
 
     </main>
-    <footer>
-        <p>&copy; 2023 Synmail - Email Synchronizer</p>
-    </footer>
-    <script src="script.js"></script>
+
+<footer>
+    <p>&copy; 2023 Synmail - Email Synchronizer</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Fetch user data
+        fetch('/api/users')
+            .then(response => response.json())
+            .then(users => console.log(users));
+
+        // FullCalendar initialization
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            plugins: ['dayGrid'],
+            events: function(info, successCallback, failureCallback) {
+                // Fetch events from your API endpoint
+                fetch('/api/events')
+                    .then(response => response.json())
+                    .then(events => {
+                        // Transform the events into the format expected by FullCalendar
+                        var transformedEvents = events.map(event => ({
+                            title: event.title,
+                            start: event.start,
+                            end: event.end
+                        }));
+
+                        // Call successCallback with the transformed events
+                        successCallback(transformedEvents);
+                    })
+                    .catch(error => {
+                        console.error('Error fetching events:', error);
+                        // Call failureCallback with an error message
+                        failureCallback('Error fetching events');
+                    });
+            }
+        });
+
+        calendar.render();
+    });
     	<script>
 		fetch('/api/users')
 		.then(response => response.json())
