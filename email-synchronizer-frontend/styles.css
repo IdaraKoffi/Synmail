@@ -61,7 +61,7 @@ ul {
 }
 
 #unified-inbox {
-    border: 1px solid #ccc; /* border for the unified inbox */
+    border: 1px solid #ccc;
     padding: 10px;
 }
 
@@ -101,17 +101,38 @@ body {
     font-family: Arial, sans-serif;
 }
 
-@media screen and (max-width: 600px) {
-    header {
-        padding: 5px;
-    }
+/* Media Queries */
 
+@media screen and (max-width: 1200px) {
+    /* Adjust styles for screens up to 1200px width */
+    main {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    /* Adjust styles for screens up to 900px width */
     main {
         padding: 10px;
     }
 
     form {
         width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* Adjust styles for screens up to 600px width */
+    header {
+        padding: 5px;
+    }
+
+    main {
+        padding: 5px;
+    }
+
+    form {
+        width: 100%;
     }
 
     #unified-inbox {
