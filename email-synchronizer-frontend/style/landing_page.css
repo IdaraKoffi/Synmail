@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.section_1 {
+    background-image: url("../image/background\ image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    height: 30%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    background-color: rgb(65, 140, 228, 0.23);
+}
+nav {
+    background-color: #333;
+    overflow: hidden;
+    padding: 10px; /* Add padding for a bit of space around the elements */
+}
+
+.logo img {
+    border-radius: 50%; /* Make the logo circular */
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
